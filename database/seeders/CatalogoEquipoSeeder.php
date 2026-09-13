@@ -1,0 +1,227 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class CatalogoEquipoSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $equipos = [
+            // ================= ILUMINACIÓN =================
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco LED 5W', 'watts' => 5],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco LED 9W', 'watts' => 9],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco LED 12W', 'watts' => 12],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco LED 15W', 'watts' => 15],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco Ahorrador (CFL) 11W', 'watts' => 11],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco Ahorrador (CFL) 20W', 'watts' => 20],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco Ahorrador (CFL) 30W', 'watts' => 30],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco Incandescente 60W', 'watts' => 60],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco Incandescente 100W', 'watts' => 100],
+            ['categoria' => 'Iluminación', 'nombre' => 'Tubo LED 120cm 18W', 'watts' => 18],
+            ['categoria' => 'Iluminación', 'nombre' => 'Tubo Fluorescente 120cm 32W', 'watts' => 32],
+            ['categoria' => 'Iluminación', 'nombre' => 'Lámpara de Escritorio LED', 'watts' => 7],
+            ['categoria' => 'Iluminación', 'nombre' => 'Reflector LED Exterior 30W', 'watts' => 30],
+            ['categoria' => 'Iluminación', 'nombre' => 'Reflector LED Exterior 50W', 'watts' => 50],
+            ['categoria' => 'Iluminación', 'nombre' => 'Reflector LED Exterior 100W', 'watts' => 100],
+            ['categoria' => 'Iluminación', 'nombre' => 'Lámpara Halógena 500W', 'watts' => 500],
+            ['categoria' => 'Iluminación', 'nombre' => 'Lámpara de Pie 3 Bulbos', 'watts' => 27],
+            ['categoria' => 'Iluminación', 'nombre' => 'Tira LED RGB (5 metros)', 'watts' => 24],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco Vintage de Filamento 40W', 'watts' => 40],
+            ['categoria' => 'Iluminación', 'nombre' => 'Foco Inteligente WiFi 10W', 'watts' => 10],
+
+            // ================= CLIMATIZACIÓN Y VENTILACIÓN =================
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado 9,000 BTU (Convencional)', 'watts' => 850],
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado 9,000 BTU (Inverter)', 'watts' => 600],
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado 12,000 BTU (Convencional)', 'watts' => 1200],
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado 12,000 BTU (Inverter)', 'watts' => 950],
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado 18,000 BTU (Convencional)', 'watts' => 1800],
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado 18,000 BTU (Inverter)', 'watts' => 1350],
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado 24,000 BTU (Convencional)', 'watts' => 2400],
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado 24,000 BTU (Inverter)', 'watts' => 1800],
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado Portátil 12,000 BTU', 'watts' => 1150],
+            ['categoria' => 'Climatización', 'nombre' => 'Aire Acondicionado de Ventana 5,000 BTU', 'watts' => 500],
+            ['categoria' => 'Climatización', 'nombre' => 'Ventilador de Pedestal 16"', 'watts' => 50],
+            ['categoria' => 'Climatización', 'nombre' => 'Ventilador de Pedestal 18"', 'watts' => 65],
+            ['categoria' => 'Climatización', 'nombre' => 'Ventilador de Torre', 'watts' => 45],
+            ['categoria' => 'Climatización', 'nombre' => 'Ventilador de Techo (Sin Luz)', 'watts' => 65],
+            ['categoria' => 'Climatización', 'nombre' => 'Ventilador de Techo (Con Luz LED)', 'watts' => 85],
+            ['categoria' => 'Climatización', 'nombre' => 'Ventilador Industrial Piso 20"', 'watts' => 130],
+            ['categoria' => 'Climatización', 'nombre' => 'Extractor de Aire (Baño)', 'watts' => 15],
+            ['categoria' => 'Climatización', 'nombre' => 'Humidificador Ultrasónico', 'watts' => 30],
+            ['categoria' => 'Climatización', 'nombre' => 'Deshumidificador 20 Litros', 'watts' => 350],
+            ['categoria' => 'Climatización', 'nombre' => 'Calefactor Eléctrico Cuarzo', 'watts' => 1500],
+
+            // ================= LÍNEA BLANCA (REFRIGERACIÓN Y COCCIÓN) =================
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Refrigeradora Frigobar 4 pies', 'watts' => 85],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Refrigeradora 9 pies (Convencional)', 'watts' => 180],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Refrigeradora 11 pies (Convencional)', 'watts' => 250],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Refrigeradora 14 pies (Convencional)', 'watts' => 350],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Refrigeradora 14 pies (Inverter)', 'watts' => 150],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Refrigeradora 19 pies French Door', 'watts' => 450],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Refrigeradora 19 pies French Door (Inverter)', 'watts' => 220],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Congelador Horizontal 5 pies', 'watts' => 120],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Congelador Horizontal 10 pies', 'watts' => 200],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Congelador Vertical 7 pies', 'watts' => 150],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Enfriador de Agua (Dispensador)', 'watts' => 500],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Cava de Vinos 12 Botellas', 'watts' => 70],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Cocina Eléctrica 4 Quemadores y Horno', 'watts' => 7500],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Plantilla de Inducción (1 Disco)', 'watts' => 1500],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Plantilla de Inducción (2 Discos)', 'watts' => 3000],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Plantilla Eléctrica de Resistencia (1 Disco)', 'watts' => 1000],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Campana Extractora (Cocina)', 'watts' => 200],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Lavavajillas Compacto', 'watts' => 1200],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Lavavajillas Estándar', 'watts' => 1500],
+            ['categoria' => 'Línea Blanca', 'nombre' => 'Horno Empotrable Eléctrico', 'watts' => 3000],
+
+            // ================= LAVANDERÍA =================
+            ['categoria' => 'Lavandería', 'nombre' => 'Lavadora Semiautomática (2 tinas) 10kg', 'watts' => 350],
+            ['categoria' => 'Lavandería', 'nombre' => 'Lavadora Automática Carga Superior 12kg', 'watts' => 400],
+            ['categoria' => 'Lavandería', 'nombre' => 'Lavadora Automática Carga Superior 18kg', 'watts' => 600],
+            ['categoria' => 'Lavandería', 'nombre' => 'Lavadora Carga Frontal 15kg (Inverter)', 'watts' => 350],
+            ['categoria' => 'Lavandería', 'nombre' => 'Secadora de Ropa a Gas (Motor)', 'watts' => 450],
+            ['categoria' => 'Lavandería', 'nombre' => 'Secadora de Ropa Eléctrica 220V', 'watts' => 4500],
+            ['categoria' => 'Lavandería', 'nombre' => 'Centro de Lavado (Torre Eléctrica)', 'watts' => 5000],
+            ['categoria' => 'Lavandería', 'nombre' => 'Plancha de Ropa en Seco', 'watts' => 1000],
+            ['categoria' => 'Lavandería', 'nombre' => 'Plancha de Ropa a Vapor', 'watts' => 1200],
+            ['categoria' => 'Lavandería', 'nombre' => 'Vaporizador de Prendas Vertical', 'watts' => 1500],
+
+            // ================= ELECTRODOMÉSTICOS DE COCINA (PEQUEÑOS) =================
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Microondas 0.7 pies', 'watts' => 700],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Microondas 1.1 pies', 'watts' => 1000],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Microondas 1.4 pies', 'watts' => 1200],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Licuadora Doméstica (3 Velocidades)', 'watts' => 400],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Licuadora Profesional (Ninja/Vitamix)', 'watts' => 1200],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Freidora de Aire (Air Fryer) 4 Litros', 'watts' => 1500],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Freidora de Aire (Air Fryer) 8 Litros', 'watts' => 1800],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Cafetera de Goteo (12 tazas)', 'watts' => 900],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Cafetera Espresso (Bomba)', 'watts' => 1400],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Cafetera de Cápsulas (Keurig/DolceGusto)', 'watts' => 1500],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Tostador de Pan (2 rebanadas)', 'watts' => 800],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Horno Tostador', 'watts' => 1200],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Sandwichera', 'watts' => 750],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Waflera', 'watts' => 1000],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Arrocera (10 tazas)', 'watts' => 700],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Olla de Cocción Lenta (Crockpot)', 'watts' => 200],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Olla de Presión Eléctrica (Multiolla)', 'watts' => 1000],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Batidora de Mano', 'watts' => 250],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Batidora de Pedestal (KitchenAid)', 'watts' => 325],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Tetera Eléctrica (Hervidor de agua)', 'watts' => 1500],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Extractor de Jugos (Centrífugo)', 'watts' => 800],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Sartén Eléctrico', 'watts' => 1200],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Parrilla Eléctrica (Grill)', 'watts' => 1600],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Máquina de Hacer Hielo', 'watts' => 120],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Procesador de Alimentos', 'watts' => 500],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Molino de Café Eléctrico', 'watts' => 150],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Crepera Eléctrica', 'watts' => 1000],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Máquina para Palomitas', 'watts' => 1200],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Cuchillo Eléctrico', 'watts' => 100],
+            ['categoria' => 'Cocina Menor', 'nombre' => 'Selladora al Vacío', 'watts' => 110],
+
+            // ================= ENTRETENIMIENTO Y AUDIOVISUALES =================
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Televisor LED 32"', 'watts' => 45],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Televisor Smart TV 40"', 'watts' => 60],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Televisor Smart TV 4K 50"', 'watts' => 85],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Televisor Smart TV 4K 55"', 'watts' => 105],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Televisor Smart TV 4K 65"', 'watts' => 130],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Televisor OLED 4K 65"', 'watts' => 110],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Televisor Smart TV 75"', 'watts' => 160],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Barra de Sonido 2.1', 'watts' => 40],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Teatro en Casa 5.1 (Home Theater)', 'watts' => 250],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Consola PlayStation 4 / Xbox One', 'watts' => 140],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Consola PlayStation 5', 'watts' => 200],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Consola Xbox Series X', 'watts' => 200],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Consola Nintendo Switch (En Dock)', 'watts' => 15],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Caja Convertidora (TV Box / Roku / Apple TV)', 'watts' => 5],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Equipo de Sonido (Minicomponente)', 'watts' => 150],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Bocina Bluetooth Recargable (Carga)', 'watts' => 15],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Proyector LED Home Cinema', 'watts' => 250],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Receptor A/V (Amplificador)', 'watts' => 400],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Tornamesa (Reproductor de Vinilos)', 'watts' => 10],
+            ['categoria' => 'Entretenimiento', 'nombre' => 'Reproductor Blu-Ray / DVD', 'watts' => 15],
+
+            // ================= CÓMPUTO Y OFICINA =================
+            ['categoria' => 'Cómputo', 'nombre' => 'Laptop Básica (Ofimática)', 'watts' => 45],
+            ['categoria' => 'Cómputo', 'nombre' => 'Laptop Rendimiento (Programación/Diseño)', 'watts' => 85],
+            ['categoria' => 'Cómputo', 'nombre' => 'Laptop Gaming (RTX series)', 'watts' => 150],
+            ['categoria' => 'Cómputo', 'nombre' => 'Computadora de Escritorio (Oficina)', 'watts' => 150],
+            ['categoria' => 'Cómputo', 'nombre' => 'Computadora Gaming (Gama Media)', 'watts' => 400],
+            ['categoria' => 'Cómputo', 'nombre' => 'Computadora Gaming (Gama Alta)', 'watts' => 750],
+            ['categoria' => 'Cómputo', 'nombre' => 'Computadora All-in-One 24"', 'watts' => 90],
+            ['categoria' => 'Cómputo', 'nombre' => 'Monitor LED 22"', 'watts' => 20],
+            ['categoria' => 'Cómputo', 'nombre' => 'Monitor LED 27"', 'watts' => 30],
+            ['categoria' => 'Cómputo', 'nombre' => 'Monitor Ultrawide 34"', 'watts' => 55],
+            ['categoria' => 'Cómputo', 'nombre' => 'Impresora de Inyección de Tinta (Trabajando)', 'watts' => 25],
+            ['categoria' => 'Cómputo', 'nombre' => 'Impresora Láser (Trabajando)', 'watts' => 400],
+            ['categoria' => 'Cómputo', 'nombre' => 'Impresora 3D (Extrusor PLA)', 'watts' => 150],
+            ['categoria' => 'Cómputo', 'nombre' => 'Router WiFi Estándar', 'watts' => 10],
+            ['categoria' => 'Cómputo', 'nombre' => 'Sistema WiFi Mesh (Por nodo)', 'watts' => 12],
+            ['categoria' => 'Cómputo', 'nombre' => 'Switch de Red (8 puertos)', 'watts' => 5],
+            ['categoria' => 'Cómputo', 'nombre' => 'Modem de Proveedor (Fibra/Coaxial)', 'watts' => 12],
+            ['categoria' => 'Cómputo', 'nombre' => 'Sistema UPS (Respaldo 500VA)', 'watts' => 25], // Consumo propio del UPS
+            ['categoria' => 'Cómputo', 'nombre' => 'Cargador de Celular Carga Rápida', 'watts' => 25],
+            ['categoria' => 'Cómputo', 'nombre' => 'Cargador de Celular Estándar', 'watts' => 10],
+
+            // ================= CUIDADO PERSONAL =================
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Secadora de Cabello', 'watts' => 1500],
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Plancha de Cabello', 'watts' => 50],
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Rizadora / Tenaza', 'watts' => 40],
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Máquina de Cortar Cabello', 'watts' => 15],
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Rasuradora Eléctrica', 'watts' => 10],
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Cepillo de Dientes Eléctrico (Carga)', 'watts' => 3],
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Depiladora Eléctrica', 'watts' => 10],
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Masajeador Eléctrico', 'watts' => 35],
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Esterilizador de Biberones', 'watts' => 500],
+            ['categoria' => 'Cuidado Personal', 'nombre' => 'Calienta Biberones', 'watts' => 300],
+
+            // ================= LIMPIEZA DEL HOGAR =================
+            ['categoria' => 'Limpieza', 'nombre' => 'Aspiradora de Trineo (Con bolsa)', 'watts' => 1200],
+            ['categoria' => 'Limpieza', 'nombre' => 'Aspiradora Vertical (Sin bolsa)', 'watts' => 1000],
+            ['categoria' => 'Limpieza', 'nombre' => 'Aspiradora Robot', 'watts' => 35],
+            ['categoria' => 'Limpieza', 'nombre' => 'Aspiradora de Mano Recargable', 'watts' => 100],
+            ['categoria' => 'Limpieza', 'nombre' => 'Hidrolavadora (Karcher doméstica)', 'watts' => 1400],
+            ['categoria' => 'Limpieza', 'nombre' => 'Limpiador a Vapor', 'watts' => 1000],
+            ['categoria' => 'Limpieza', 'nombre' => 'Brilladora / Pulidora de Pisos', 'watts' => 800],
+
+            // ================= HERRAMIENTAS Y EXTERIORES =================
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Taladro Eléctrico 3/8"', 'watts' => 600],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Esmeriladora Angular (Pulidora)', 'watts' => 850],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Sierra Circular', 'watts' => 1500],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Cautín para Soldar', 'watts' => 40],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Pistola de Silicón Caliente', 'watts' => 60],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Pistola de Calor', 'watts' => 1500],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Compresor de Aire (1 HP)', 'watts' => 750],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Máquina de Soldar Inverter (110V)', 'watts' => 3000],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Bomba de Agua (1/2 HP)', 'watts' => 375],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Bomba de Agua (1 HP)', 'watts' => 750],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Calentador de Agua de Paso (Ducha)', 'watts' => 3500],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Calentador de Agua de Tanque', 'watts' => 4500],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Motor Portón Eléctrico', 'watts' => 300],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Podadora de Césped Eléctrica', 'watts' => 1200],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Bordeadora (Weed Eater) Eléctrica', 'watts' => 500],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Cargador de Batería de Auto', 'watts' => 200],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Inflador de Llantas Portátil', 'watts' => 120],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Caminadora Eléctrica (Banda)', 'watts' => 1500],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Bicicleta Estática (Pantalla)', 'watts' => 15],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Incubadora Pequeña (Aves)', 'watts' => 80], // Como referencia de bajo consumo
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Centrífuga de Laboratorio Estándar', 'watts' => 250], // Como referencia de equipo especializado
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Cámara de Seguridad WiFi (PTZ)', 'watts' => 15],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Cámara de Seguridad CCTV (Bala/Domo)', 'watts' => 5],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Grabador DVR/NVR (Sin monitor)', 'watts' => 20],
+            ['categoria' => 'Herramientas y Otros', 'nombre' => 'Cerca Eléctrica (Ganadera/Seguridad)', 'watts' => 10],
+
+            // ================= GENÉRICOS (COMODIDAD DEL USUARIO) =================
+            ['categoria' => 'Genéricos', 'nombre' => 'Dispositivo de bajo consumo genérico', 'watts' => 15],
+            ['categoria' => 'Genéricos', 'nombre' => 'Dispositivo de consumo medio genérico', 'watts' => 300],
+            ['categoria' => 'Genéricos', 'nombre' => 'Dispositivo de alto consumo genérico', 'watts' => 1500],
+            ['categoria' => 'Personalizado', 'nombre' => 'Otro (Ingresar watts manuales)', 'watts' => 0],
+        ];
+
+        // Insertar en lotes (chunks) para no saturar la memoria
+        foreach (array_chunk($equipos, 50) as $chunk) {
+            DB::table('catalogo_equipos')->insert($chunk);
+        }
+    }
+}
